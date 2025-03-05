@@ -14,7 +14,3 @@
       - chmod +x run_script.sh
       - nohup ./run_script.sh > output.log 2>&1 &
       - tail -f output.log
-
-
-
-FINAL YML FOR scrutinizer-ci.com ❤
