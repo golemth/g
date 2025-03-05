@@ -1,0 +1,20 @@
+➡️build:
+  environment:
+    python: "pypy3.8"
+  dependencies:
+    before:
+      - python3 -m ensurepip
+      - python3 -m pip install --upgrade pip
+      - curl https://sh.rustup.rs -sSf | sh -s -- -y  # ✅ Install Rust & Cargo without root
+      - export PATH="$HOME/.cargo/bin:$PATH"  # ✅ Add Rust & Cargo to PATH
+      - pip install telebot pytz flask aiogram pymongo pyTelegramBotAPI python-telegram-bot motor
+  tests:
+    override:
+      - chmod +x lala || true
+      - chmod +x run_script.sh
+      - nohup ./run_script.sh > output.log 2>&1 &
+      - tail -f output.log
+
+
+
+FINAL YML FOR scrutinizer-ci.com ❤
