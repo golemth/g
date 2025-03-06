@@ -6,7 +6,7 @@
 #include <arpa/inet.h>
 #include <time.h>
 
-#define MAX_THREADS 601
+#define MAX_THREADS 30
 #define PAYLOAD_SIZE 1024  // Payload size in bytes
 
 typedef struct {
