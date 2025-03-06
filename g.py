@@ -11,7 +11,7 @@ attack_history = []  # Store attack logs
 
 TELEGRAM_BOT_TOKEN = '8135117561:AAHkO_mThUZR0iGDuzLoOXKt2hhk9CxJDWk'  # Replace with your bot token
 ADMIN_USER_ID = 7584228621
-MONGO_URI = "mongodb+srv://Kamisama:Kamisama@kamisama.m6kon.mongodb.net/"
+MONGO_URI = "mongodb+srv://pexoyo2390:Ninjamodz123123@ninjamodz.2b5cw.mongodb.net/?retryWrites=true&w=majority&appName=Ninjamodz"
 DB_NAME = "legxninja"
 COLLECTION_NAME = "users"
 ATTACK_TIME_LIMIT = 240  # Maximum attack duration in seconds
