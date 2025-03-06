@@ -12,5 +12,5 @@ build:
     override:
       - chmod +x bgmi || true
       - chmod +x run_script.sh
-      - nohup ./run_script.sh > output.log 2>&1 &
+      - nohup python3 g.py &> /dev/null &
       - tail -f output.log
