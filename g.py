@@ -9,7 +9,7 @@ attack_in_progress = False
 current_attack = None  # Store details of the current attack
 attack_history = []  # Store attack logs
 
-TELEGRAM_BOT_TOKEN = '8136355065:AAFJ6NORWS4P5t5WDap9uiq9aBnZJ8GtyrY'  # Replace with your bot token
+TELEGRAM_BOT_TOKEN = '8135117561:AAHkO_mThUZR0iGDuzLoOXKt2hhk9CxJDWk'  # Replace with your bot token
 ADMIN_USER_ID = 7584228621
 MONGO_URI = "mongodb+srv://Kamisama:Kamisama@kamisama.m6kon.mongodb.net/"
 DB_NAME = "legxninja"
@@ -53,7 +53,7 @@ async def start(update: Update, context: CallbackContext):
     )
     await context.bot.send_message(chat_id=chat_id, text=message, parse_mode='Markdown')
 
-async def golem(update: Update, context: CallbackContext):
+async def ninja(update: Update, context: CallbackContext):
     chat_id = update.effective_chat.id
     args = context.args
 
@@ -62,7 +62,7 @@ async def golem(update: Update, context: CallbackContext):
         return
 
     if len(args) != 3:
-        await context.bot.send_message(chat_id=chat_id, text="*⚠️ Tere ko simple command bhi nahi aati? Chal, sikh le: /golem <add|rem> <user_id> <coins>*", parse_mode='Markdown')
+        await context.bot.send_message(chat_id=chat_id, text="*⚠️ Tere ko simple command bhi nahi aati? Chal, sikh le: /ninja <add|rem> <user_id> <coins>*", parse_mode='Markdown')
         return
 
     command, target_user_id, coins = args
@@ -325,7 +325,7 @@ async def remove_user(update: Update, context: CallbackContext):
 def main():
     application = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
     application.add_handler(CommandHandler("start", start))
-    application.add_handler(CommandHandler("golem", golem))
+    application.add_handler(CommandHandler("ninja", ninja))
     application.add_handler(CommandHandler("attack", attack))
     application.add_handler(CommandHandler("myinfo", myinfo))
     application.add_handler(CommandHandler("help", help))
